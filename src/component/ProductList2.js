@@ -1,33 +1,17 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { addToCart, removeFromCart } from "../redux/reducers2";
 
-const ProductList1=()=>{
+const ProductList2=()=>{
     const products = useSelector(state=>state.products); //return initialState.products
     const cart = useSelector(state=>state.cart); //return initialState.cart
     const dispatch = useDispatch();
-
-    const add = 'ADD_TO_CART';
-    const remove = 'REMOVE_FROM_CART';
-
-    const addToCart = product => {
-        dispatch({
-            type:add,
-            payload:product,
-        })
-    }
-
-    const removefromCart = product => {
-        dispatch({
-            type:remove,
-            payload:product,
-        })
-    }
 
     const click = (product) => {
         const isProductInCart = cart.some((item) => item.id === product.id);
 
         if(isProductInCart){
-            removefromCart(product);
+            removeFromCart(product);
         }else{
             addToCart(product);
         }
@@ -35,7 +19,7 @@ const ProductList1=()=>{
 
     return(
         <div className="productList">
-            <h1>제품 목록 Redux</h1>
+            <h1>제품 목록 Redux-Tookit</h1>
             <div className="productWrap">
                 {products.map((i)=>{
                     return(
@@ -50,4 +34,4 @@ const ProductList1=()=>{
     )
 }
 
-export default ProductList1;
+export default ProductList2;
