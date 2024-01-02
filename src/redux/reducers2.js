@@ -32,14 +32,14 @@ const initialState2 = {
 }
 
 const productSlice = createSlice({
-    name:'products',
-    initialState2,
-    reducers:{
-        addToCart:(state, action)=>{
-            state.cart.push(action.payload);
+    name:'products', //슬라이스 이름 지정
+    initialState: initialState2, //초기 상태 지정
+    reducers:{ //리듀서 함수 지정
+        addToCart:(state, action)=>{ //함수 addToCart
+            state.cart = [...state.cart, action.payload];
         },
-        removeFromCart:(state, action)=>{
-            state.cart = state.cart.filter((i)=>{i.id !== action.payload.id});
+        removeFromCart:(state, action)=>{ //함수 removeFromCart
+            state.cart = state.cart.filter((i)=>{return (i.id !== action.payload.id)});
         }
     }
 })
