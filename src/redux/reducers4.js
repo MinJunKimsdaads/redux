@@ -1,4 +1,4 @@
-const initialState1 = {
+const initialState4 = {
     products:[
         {
             id:1,
@@ -29,7 +29,7 @@ const initialState1 = {
     cart:[],
 }
 
-const rootReducer1 = (state=initialState1,action) => {
+const rootReducer4 = (state=initialState4,action) => {
     switch(action.type){
         case 'ADD_TO_CART':
             return{
@@ -43,9 +43,14 @@ const rootReducer1 = (state=initialState1,action) => {
                     return (i.id !== action.payload.id)
                 })
             };
+        case 'FETCH_PRODUCTS_SUCCESS':
+            return{
+                ...state,
+                products: action.payload,
+            }
         default:
             return state;
     }
 }
 
-export default rootReducer1;
+export default rootReducer4;

@@ -36,10 +36,13 @@ const ProductList1=()=>{
     return(
         <div className="productList">
             <h1>제품 목록 Redux</h1>
+            <h3>cart: {cart.map((i)=>{return(<span className="cartBox">{i.name}</span>)})}</h3>
             <div className="productWrap">
                 {products.map((i)=>{
+                    const activeInCart = cart.some((item) => item.id === i.id);
+                    const cartClass = activeInCart ? 'cartIn' : 'cartOut';
                     return(
-                        <div key={i.id} className="productBox" onClick={()=>{click(i)}}>
+                        <div key={i.id} className={`productBox ${cartClass}`} onClick={()=>{click(i)}}>
                             <div>{i.name}</div>
                             <div>{i.price}</div>
                         </div>

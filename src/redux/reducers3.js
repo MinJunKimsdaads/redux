@@ -40,7 +40,7 @@ const rootReducer3 = (state=initialState3,action) => {
             return{
                 ...state,
                 cart:state.cart.filter((i)=>{
-                    i.id !== action.payload
+                    return (i.id !== action.payload.id)
                 })
             };
         case 'FETCH_PRODUCTS_SUCCESS':
