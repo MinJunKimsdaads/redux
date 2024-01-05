@@ -13,27 +13,27 @@ const ProductList5 = () => {
 
     return (
         <div className="productList">
-      <h1>제품 목록 Recoil</h1>
-      <h3>cart: {cart.map((i) => <span key={`${i.id}`} className="cartBox">{i.name}</span>)}</h3>
-      <div className="productWrap">
-        {products.map((i) => {
-          const activeInCart = cart.some((item) => item.id === i.id);
-          const cartClass = activeInCart ? 'cartIn' : 'cartOut';
-          return (
-            <div
-              key={i.id}
-              className={`productBox ${cartClass}`}
-              onClick={() => {
-                click(i);
-              }}
-            >
-              <div>{i.name}</div>
-              <div>{i.price}</div>
-            </div>
-          );
-        })}
-      </div>
-    </div>
+          <h2>제품 목록 Recoil</h2>
+          <h3>cart: {cart.map((i) => <span key={`${i.id}`} className="cartBox">{i.name}</span>)}</h3>
+          <div className="productWrap">
+            {products.map((i) => {
+              const activeInCart = cart.some((item) => item.id === i.id);
+              const cartClass = activeInCart ? 'cartIn' : 'cartOut';
+              return (
+                <div
+                  key={i.id}
+                  className={`productBox ${cartClass}`}
+                  onClick={() => {
+                    click(i);
+                  }}
+                >
+                  <div>{i.name}</div>
+                  <div>{i.price}</div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
     );
 };
 

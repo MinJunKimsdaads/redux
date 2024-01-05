@@ -83,7 +83,7 @@ const ProductList3 = () => {
 
   return (
     <div className="productList">
-      <h1>제품 목록 Redux-Thunk</h1>
+      <h2>제품 목록 Redux-Thunk</h2>
       <h3>cart: {cart.map((i)=>{return(<span className="cartBox">{i.name}</span>)})}</h3>
       <div className="productWrap">
         {products.map((i) => {

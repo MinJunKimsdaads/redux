@@ -23,7 +23,7 @@ const ProductList2=()=>{
 
     return(
         <div className="productList">
-            <h1>제품 목록 Redux-Tookit</h1>
+            <h2>제품 목록 Redux-Tookit</h2>
             <h3>cart: {cart.map((i)=>{return(<span className="cartBox">{i.name}</span>)})}</h3>
             <div className="productWrap">
                 {products.map((i)=>{
