@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+<h2>여러 상태관리 라이브러리를 정리 겸, 공부</h2>
+<p>-> 간단한 장바구니 기능을 통해 상태관리 확인</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="http://aaeexx.dothome.co.kr/project/image/redux/redux.gif">
 
-## Available Scripts
+<h3>redux</h3>
+<p>-> 기본적인 상태관리 라이브러리</p>
+<p>-> 파이프라인 코드가 많이 생김</p>
 
-In the project directory, you can run:
+<h3>redux-toolkit</h3>
+<p>-> redux 함수에 비해 편함</p>
+<p>-> reducer에 action 함수를 바로 사용할 수 있음 (createSlice)</p>
+<p>-> immer를 사용해서 불변성을 유지하면서 보일러플레이트 코드를 줄임</p>
 
-### `npm start`
+<h3>redux-thunk</h3>
+<p>-> redux에 비동기 작업 처리에 중점</p>
+<p>-> 일반 redux와 유사, 미들웨어 사용</p>
+<p>-> 미들웨어 사용이 간단함</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h3>redux-saga</h3>
+<p>-> redux에 비동기 작업 처리에 중점</p>
+<p>-> 제너레이터 함수를 주요 사용</p>
+<p>-> put, delay등 다양한 메서드가 있으며 redux-thunk에 비해 복잡함</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h3>recoil</h3>
+<p>-> redux와 달리 컴포넌트 간에 상태를 전달하는 데 효과적</p>
 
-### `npm test`
+<h3>mobx</h3>
+<p>-> Class를 사용, 객체의 변화를 감지하고 상태를 직접 변경</p>
+<p>-> redux에 비해 좀 더 간단한 코드</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

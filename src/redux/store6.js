@@ -32,7 +32,7 @@ class ProductStore {
   cart = [];
 
   constructor() {
-    makeAutoObservable(this);
+    makeAutoObservable(this); //상태 변화를 추적하고, 해당 변화에 연결된 리액션을 실행
   }
 
   addToCart(product) {

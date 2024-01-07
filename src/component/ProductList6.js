@@ -1,6 +1,6 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
-import productStore from "./store";
+import productStore from "../redux/store6";
 
 const ProductList6 = observer(() => {
   const { products, cart, addToCart, removeFromCart } = productStore;

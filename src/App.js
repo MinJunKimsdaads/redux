@@ -1,6 +1,6 @@
 import React from "react";
 import { Provider } from "react-redux";
-import { Provider } from "mobx-react";
+// import { Provider } from "mobx-react";
 import store1 from "./redux/store1"; //redux
 import store2 from "./redux/store2"; //redux-Toolkit
 import store3 from "./redux/store3"; //redux-thunk
@@ -41,9 +41,11 @@ function App() {
         <ProductList5></ProductList5>
       </RecoilRoot>
 
-      <Provider productStore={productStore}>
-        <ProductList />
-      </Provider>
+      {/* <Provider productStore={productStore}>
+        <ProductList6 />
+      </Provider> */}
+
+      
       
     </div>
   );

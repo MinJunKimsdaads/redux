@@ -4,7 +4,7 @@ import { initialState5 } from "../recoil/atoms";
 
 const ProductList5 = () => {
     const { products, cart } = useRecoilState(initialState5)[0];
-    const setCart = useSetRecoilState(initialState5);
+    const setCart = useSetRecoilState(initialState5); //set 반환
 
     const click = (product) => {
         // setCart 함수는 새로운 상태를 반환하는 함수이므로 함수형 업데이트 사용
